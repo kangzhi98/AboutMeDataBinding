@@ -39,9 +39,10 @@ class MainActivity : AppCompatActivity() {
     private val myName: MyName = MyName("Aleks Haecky")
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-        binding.myName = myName
+
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.myName = myName
         binding.doneButton.setOnClickListener {
             addNickname(it)
         }
